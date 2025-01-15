@@ -1,6 +1,7 @@
 from mysql.connector import connect, Error
 
 try:
+    # Pozor, přihlašovací údaje bychom neměli sdílet na veřejném repozitáři.
     with connect(host='localhost', user='test', password='test') as conn:
         print(conn)
         with conn.cursor() as cursor:
