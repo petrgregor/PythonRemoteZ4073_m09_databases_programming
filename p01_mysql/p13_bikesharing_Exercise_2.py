@@ -19,8 +19,7 @@ try:
                     sql_statement = f"""
                         INSERT INTO bikesharing (tstamp, cnt, temperature, temperature_feels, humidity,
                             wind_speed, weather_code, is_holiday, is_weekend, season)
-                            VALUES ('{row[0]}', '{row[1]}', '{row[2]}', '{row[3]}', '{row[4]}', '{row[5]}', '{row[6]}', '{row[7]}', '{row[8]}', '{row[9]}');
-                            
+                            VALUES ('{row[0]}', '{row[1]}', '{row[2]}', '{row[3]}', '{row[4]}', '{row[5]}', '{row[6]}', '{row[7]}', '{row[8]}', '{row[9]}');                            
                     """
                     cursor.execute(sql_statement)
                     i += 1
