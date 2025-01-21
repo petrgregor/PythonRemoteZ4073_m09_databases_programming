@@ -10,3 +10,12 @@ class Student(Base):
     first_name = Column(String(30))
     last_name = Column(String(30))
     class_name = Column(String(30))
+
+    def __repr__(self):
+        return f"Student(id={self.id}, first_name={self.first_name}, last_name={self.last_name})"
+
+    def __str__(self):
+        return f"Student #{self.id} {self.first_name} {self.last_name}"
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
