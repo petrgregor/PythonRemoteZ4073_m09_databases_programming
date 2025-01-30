@@ -10,8 +10,8 @@ load_dotenv()
 #mongo_client = pymongo.MongoClient("mongodb://127.0.0.1:27017")
 
 mongo_client = pymongo.MongoClient(f"mongodb://"
-                                   f"{os.getenv("mongo_host", default="127.0.0.1")}:"
-                                   f"{os.getenv("mongo_port", default=27017)}")
+                                   f"{os.getenv('mongo_host', default='127.0.0.1')}:"
+                                   f"{os.getenv('mongo_port', default=27017)}")
 
 # vytvoření databáze
 db_test_Z4073 = mongo_client.db_test_Z4073

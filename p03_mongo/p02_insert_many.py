@@ -1,7 +1,16 @@
 from connect_mongo import db_test_Z4073
 
 
-customers_collection = db_test_Z4073["customers"]
+#customers_collection = db_test_Z4073["customers"]
+
+customers_collection = db_test_Z4073.create_collection(
+    "customers_cs",
+    collation={
+        "locale": "cs",  # Nastavení české lokalizace
+        "strength": 1    # Ignoruje rozdíly mezi velkými a malými písmeny
+    }
+)
+
 
 customers = [
     {"name": "Adam", "surname": "Novák", "address": "Hlavní 25, Brno"},
